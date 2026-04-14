@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eef5fb;
+    color: #1f2d3d;
+    line-height: 1.6;
+}
+
+.topbar {
+    background: #005b96;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.author-box {
+    background: rgba(255,255,255,0.15);
+    padding: 12px 18px;
+    border-radius: 10px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    background: linear-gradient(to right, #d9ecff, #ffffff);
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-right img {
+    width: 220px;
+}
+
+.predict-box,
+.heatmap-box {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border-top: 5px solid #005b96;
+}
+
+.predict-box h2,
+.heatmap-box h2 {
+    text-align: center;
+    color: #005b96;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+label {
+    font-weight: bold;
+    color: #005b96;
+}
+
+input, select {
+    padding: 12px;
+    border: 1px solid #cfdceb;
+    border-radius: 8px;
+}
+
+button {
+    background: #005b96;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.result-box {
+    margin-top: 25px;
+}
+
+.result-grid,
+.heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.result-card,
+.zone {
+    padding: 20px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.blue { background: #0d6efd; }
+.green { background: #198754; }
+.cyan { background: #0dcaf0; }
+.yellow { background: #ffc107; color: #222; }
+
+.zone {
+    background: #6c757d;
+    transition: 0.3s;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    font-weight: bold;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    border-radius: 4px;
+}
+
+.legend-color.high { background: #dc3545; }
+.legend-color.medium { background: #ffc107; }
+.legend-color.low { background: #28a745; }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #005b96;
+    color: white;
+    margin-top: 40px;
+}

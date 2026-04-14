@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Vaccine Intelligence Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div>
+            <h1>National Smart Vaccine Planning Dashboard</h1>
+            <p>AI-powered Delhi vaccine demand forecasting and wastage control</p>
+        </div>
+        <div class="author-box">
+            <strong>Author:</strong> Satyam Tiwari
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <h2>Delhi Public Healthcare Intelligence</h2>
+            <p>
+                Smart district-wise vaccine planning system using Delhi HMIS data,
+                live weather, machine learning, and dynamic risk heatmaps.
+            </p>
+        </div>
+        <div class="hero-right">
+            <img src="https://cdn-icons-png.flaticon.com/512/2785/2785482.png" alt="Healthcare">
+        </div>
+    </section>
+
+    <section class="predict-box">
+        <h2>Delhi Vaccination Demand Prediction</h2>
+
+        <form id="predictionForm">
+            <label>Select Delhi Location</label>
+            <select id="location" required>
+                <option>Rohini</option>
+                <option>Dwarka</option>
+                <option>Shahdara</option>
+                <option>Laxmi Nagar</option>
+                <option>Saket</option>
+                <option>Karol Bagh</option>
+                <option>Najafgarh</option>
+                <option>Janakpuri</option>
+            </select>
+
+            <label>Live Temperature (Auto)</label>
+            <input type="number" id="temp" required>
+
+            <label>Holiday (0 or 1)</label>
+            <input type="number" id="holiday" placeholder="0 = No, 1 = Yes" required>
+
+            <label>Last Week Attendance</label>
+            <input type="number" id="last_week_attendance" placeholder="Enter attendance" required>
+
+            <label>Day of Week</label>
+            <input type="text" id="day_of_week" placeholder="e.g. Wednesday" required>
+
+            <label>Doses per Vial</label>
+            <input type="number" id="doses_per_vial" value="10" required>
+
+            <button type="submit">Predict Now</button>
+        </form>
+
+        <div class="result-box">
+            <h3>Prediction Results</h3>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <section class="heatmap-box">
+        <h2>Delhi Live District Risk Intelligence</h2>
+        <p>Dynamic district risk heatmap based on selected location prediction</p>
+
+        <div class="heatmap-grid">
+            <div class="zone" id="Rohini">Rohini</div>
+            <div class="zone" id="Dwarka">Dwarka</div>
+            <div class="zone" id="Shahdara">Shahdara</div>
+            <div class="zone" id="Laxmi Nagar">Laxmi Nagar</div>
+            <div class="zone" id="Saket">Saket</div>
+            <div class="zone" id="Karol Bagh">Karol Bagh</div>
+            <div class="zone" id="Najafgarh">Najafgarh</div>
+            <div class="zone" id="Janakpuri">Janakpuri</div>
+        </div>
+
+        <div class="legend">
+            <div><span class="legend-color high"></span> High Risk</div>
+            <div><span class="legend-color medium"></span> Medium Risk</div>
+            <div><span class="legend-color low"></span> Low Risk</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        Real Delhi HMIS Data • Live Weather • Dynamic District Risk Intelligence • Developed by Satyam Tiwari
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
