@@ -1,0 +1,16 @@
+date,center,temp,holiday,last_week_attendance,day_of_week,doses_per_vial,expected_attendance,recommended_doses,vials_to_open,wastage_risk
+2026-04-01,Dadri PHC,31,0,76,Wednesday,10,82,90,9,Medium
+2026-04-02,Dadri PHC,33,0,82,Thursday,10,88,100,10,Low
+2026-04-03,Dadri PHC,35,0,88,Friday,10,84,90,9,Medium
+2026-04-04,Dadri PHC,36,1,84,Saturday,10,60,70,7,High
+2026-04-05,Dadri PHC,34,1,60,Sunday,10,55,60,6,High
+2026-04-06,Dadri PHC,30,0,55,Monday,10,78,80,8,Low
+2026-04-07,Dadri PHC,29,0,78,Tuesday,10,85,90,9,Low
+2026-04-08,Dadri PHC,32,0,85,Wednesday,10,87,90,9,Low
+2026-04-09,Dadri PHC,37,0,87,Thursday,10,80,90,9,Medium
+2026-04-10,Dadri PHC,39,0,80,Friday,10,75,80,8,Medium
+2026-04-11,Dadri PHC,40,1,75,Saturday,10,52,60,6,High
+2026-04-12,Dadri PHC,38,1,52,Sunday,10,50,50,5,High
+2026-04-13,Dadri PHC,31,0,50,Monday,10,72,80,8,Low
+2026-04-14,Dadri PHC,30,0,72,Tuesday,10,81,90,9,Low
+2026-04-15,Dadri PHC,33,0,81,Wednesday,10,86,90,9,Low
