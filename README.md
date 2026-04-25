@@ -1,14 +1,14 @@
 # 💉 Delhi Vaccine Intelligence Dashboard
 
+<p align="center">
+  <img src="images/dashboard.png" width="30%">
+  <img src="images/prediction.png" width="30%">
+  <img src="images/result.png" width="30%">
+</p>
+
 **AI-powered district-wise vaccine demand forecasting and wastage risk optimization system for Delhi public healthcare centers.**
 
-Developed as a **Data Science + GovTech healthcare intelligence project** using:
-
-* **Random Forest Regressor** for attendance prediction
-* **Logistic Regression** for wastage risk classification
-* **Delhi HMIS real government dataset** for historical public-health signals
-* **Live weather API integration** for real-time temperature-aware forecasting
-* **Dynamic district heatmap** for risk intelligence visualization
+A **Data Science + GovTech healthcare intelligence platform** that leverages Machine Learning and real-world healthcare data to support smart vaccination planning and reduce wastage.
 
 ---
 
@@ -16,59 +16,59 @@ Developed as a **Data Science + GovTech healthcare intelligence project** using:
 
 Vaccine sessions in public healthcare centers often face **dose wastage due to incorrect vial opening decisions**.
 
-In Delhi, attendance varies by:
+In Delhi, attendance varies due to:
 
-* district
-* weather conditions
-* holiday schedules
-* previous turnout trends
-* local healthcare demand
+* District-level differences
+* Weather conditions 🌡️
+* Holidays 📅
+* Historical turnout trends 📊
+* Local healthcare demand
 
-This project helps health officers **predict attendance before the session starts**, estimate the required number of doses, and classify wastage risk.
+👉 This system helps predict attendance **before the session starts**, enabling better planning and reduced wastage.
 
 ---
 
 ## 🎯 Objectives
 
-* Forecast district-level vaccine attendance
-* Reduce vial wastage using optimized dose recommendations
-* Use real HMIS historical trends for better district priors
-* Integrate live weather for contextual prediction
-* Visualize high-risk districts using a live heatmap
-* Provide a government-dashboard style decision support system
+* 📍 Forecast district-level vaccine attendance
+* 💉 Optimize dose and vial usage
+* 📊 Use HMIS historical data
+* 🌦️ Integrate live weather data
+* 🗺️ Visualize risk via heatmaps
+* 🏥 Provide a decision-support dashboard
 
 ---
 
-## 🧠 Machine Learning Algorithms Used
+## 🧠 Machine Learning Models
 
-### 🌲 1) Random Forest Regressor
+### 🌲 Random Forest Regressor
 
-Used for **Expected Attendance Prediction**.
+Used for **attendance prediction**
 
-### Input Features
+**Inputs:**
 
-* Live temperature
+* Temperature
 * Holiday flag
 * Last week attendance
 * Day of week
 
-### Output
+**Output:**
 
 * Expected attendance
 
 ---
 
-### 📉 2) Logistic Regression
+### 📉 Logistic Regression
 
-Used for **Wastage Risk Classification**.
+Used for **wastage risk classification**
 
-### Classes
+**Classes:**
 
 * Low
 * Medium
 * High
 
-### Input Features
+**Inputs:**
 
 * Temperature
 * Holiday
@@ -77,25 +77,24 @@ Used for **Wastage Risk Classification**.
 
 ---
 
-## 📂 Dataset Used
+## 📊 Dataset
 
-### ✅ Real Delhi Government Dataset
+### ✅ Government Dataset
 
-* **Delhi HMIS Sub-District Healthcare Data**
-* cleaned and transformed into ML-ready format
-* district trend proxies extracted from historical indicators
+* Delhi HMIS Sub-District Healthcare Data
+* Cleaned and transformed for ML usage
+* District trend features extracted
 
-### Additional Features
+### ➕ Additional Inputs
 
-* Delhi district dropdown priors
-* live weather API using Open-Meteo
-* manual field override support
+* Live weather API (Open-Meteo)
+* District priors
+* Manual override support
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Project Structure
 
-```text
 DATA SCIENCE/
 │
 ├── backend/
@@ -103,100 +102,86 @@ DATA SCIENCE/
 │   ├── model_train.py
 │   ├── clean_delhi_data.py
 │   └── models/
-│       ├── attendance_model.pkl
-│       ├── risk_model.pkl
-│       ├── day_encoder.pkl
-│       └── risk_encoder.pkl
 │
 ├── frontend/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
 │
-├── dataset/
-│   ├── vaccination_data.csv
-│   ├── delhi_real_vaccine_data.csv
-│   └── delhi_cleaned_vaccine_data.csv
+├── images/
+│   ├── dashboard.png
+│   ├── prediction.png
+│   ├── result.png
 │
+├── dataset/
 └── requirements.txt
-```
 
 ---
 
 ## 🌐 Key Features
 
-* 📍 **Delhi district-wise prediction**
-* 🌡️ **Live temperature auto-fill by selected district**
-* ✍️ **Manual temperature override**
-* 📊 **Prediction analytics cards**
-* 🗺️ **Dynamic live district risk heatmap**
-* 💉 **Dose and vial recommendation engine**
-* 🏥 **Government healthcare dashboard UI**
-* ⚡ **Portable GitHub-ready project structure**
+* 📍 District-wise prediction system
+* 🌡️ Live temperature auto-fill
+* ✍️ Manual input override
+* 📊 Interactive analytics dashboard
+* 🗺️ Dynamic district risk heatmap
+* 💉 Dose & vial recommendation engine
+* 🏥 Government-style UI
+* ⚡ Lightweight and portable
 
 ---
 
 ## 🚀 How to Run
 
-### 1) Install dependencies
+### 1. Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
-### 2) Run backend
+### 2. Run backend
 
-```bash
 cd backend
 python app.py
-```
 
-### 3) Open frontend
+### 3. Open frontend
 
-Open:
-
-```text
+Open in browser:
 frontend/index.html
-```
-
-in Chrome.
 
 ---
 
-## 📈 Workflow
+## 🔄 Workflow
 
-1. User selects Delhi district
-2. Live temperature auto-fills
-3. User enters attendance history
-4. Backend loads trained ML models
-5. Random Forest predicts attendance
-6. Logistic Regression predicts wastage risk
-7. Dashboard shows doses + vial recommendations
-8. Heatmap updates selected district risk color
+1. Select district
+2. Temperature auto-fetches
+3. Enter attendance data
+4. Model predicts attendance
+5. Risk classification generated
+6. Dose recommendation calculated
+7. Heatmap updates dynamically
 
 ---
 
-## 🏆 Real-World Use Cases
+## 🏆 Use Cases
 
-* Delhi PHCs
-* district immunization officers
-* vaccine camp planning
-* Mission Indradhanush rounds
-* school immunization drives
-* heatwave-sensitive attendance forecasting
-* public health logistics optimization
+* Public Health Centers (PHCs)
+* Immunization officers
+* Vaccine campaign planning
+* Mission Indradhanush
+* School vaccination drives
+* Weather-aware forecasting
+* Public health logistics optimization
 
 ---
 
 ## 🔮 Future Scope
 
-* district trend graphs
-* monthly cost savings analytics
-* vaccine-type specific forecasting
-* geo-spatial GIS Delhi maps
-* streamlit / cloud deployment
-* integration with CoWIN / HMIS APIs
-* anomaly alerts for sudden demand spikes
+* District trend analytics
+* Cost-saving insights
+* Vaccine-type forecasting
+* GIS-based mapping
+* Cloud deployment (Streamlit/AWS)
+* CoWIN / HMIS integration
+* Demand anomaly alerts
 
 ---
 
@@ -207,6 +192,11 @@ Data Science • Healthcare AI • GovTech Innovation
 
 ---
 
-## 🌟 Project Vision
+## 🌟 Vision
 
-To transform vaccine planning from **manual estimations to AI-driven district intelligence**, helping Delhi public healthcare centers reduce wastage and improve vaccination coverage.
+To transform vaccine planning from **manual estimation → AI-driven intelligence**, improving efficiency, reducing wastage, and strengthening public healthcare systems.
+
+---
+
+
+
